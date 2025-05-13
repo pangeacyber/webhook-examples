@@ -1,3 +1,3 @@
 module webhook_example_go
 
-go 1.24.2
+go 1.24.3
