@@ -1,6 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>pangeacyber/.github:renovate-config"],
+  "extends": [
+    "local>pangeacyber/.github:renovate-config",
+    ":semanticCommits"
+  ],
+  "additionalBranchPrefix": "{{parentDir}}/",
+  "commitMessagePrefix": "{{{parentDir}}}:",
   "packageRules": [
     {
       "description": "Don't offer Python updates.",
