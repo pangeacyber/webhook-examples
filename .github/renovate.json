@@ -4,9 +4,39 @@
     "local>pangeacyber/.github:renovate-config",
     ":semanticCommits"
   ],
-  "additionalBranchPrefix": "{{parentDir}}/",
-  "commitMessagePrefix": "{{{parentDir}}}:",
+  "ignorePaths": [],
+  "semanticCommitScope": null,
   "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "additionalBranchPrefix": "ci/",
+      "semanticCommitType": "ci"
+    },
+    {
+      "matchFileNames": ["dotnet/**"],
+      "additionalBranchPrefix": "dotnet/",
+      "semanticCommitType": "dotnet"
+    },
+    {
+      "matchFileNames": ["go/**"],
+      "additionalBranchPrefix": "go/",
+      "semanticCommitType": "go"
+    },
+    {
+      "matchFileNames": ["java/**"],
+      "additionalBranchPrefix": "java/",
+      "semanticCommitType": "java"
+    },
+    {
+      "matchFileNames": ["javascript/**"],
+      "additionalBranchPrefix": "javascript/",
+      "semanticCommitType": "javascript"
+    },
+    {
+      "matchFileNames": ["python/**"],
+      "additionalBranchPrefix": "python/",
+      "semanticCommitType": "python"
+    },
     {
       "description": "Don't offer Python updates.",
       "matchDepNames": ["python"],
